@@ -1,0 +1,204 @@
+/* === GENERAL === */
+* {
+  /* Uses border-box in all elements. */
+  box-sizing: border-box;
+}
+
+/* Styling for the entire document */
+body {
+  font-family: Verdana, sans-serif;
+  margin: 2rem;
+  padding: 2rem;
+  border: 2px solid #335f89; /* Classic blue color for the border */
+}
+
+/* Styling for main heading */
+h1 {
+  font-size: 1.6rem; /* Set a larger font size for main headings */
+  text-align: center; /* Align the main heading to the center */
+  text-shadow: 3px 3px 5px rgba(22, 95, 173, 0.321); /* Add a drop shadow effect for emphasis */
+}
+
+/* Styling for sub-heading */
+h2 {
+  font-size: 1.2rem; /* Sets a moderate font size for sub-headings */
+  text-transform: uppercase; /* Converts text to uppercase for visual prominence */
+}
+
+/* Styling for sub-sub-heading */
+h3 {
+  font-size: 1rem; /* A size that's between h2 and p for differentiation */
+}
+
+/* Apply padding below headers to provide spacing and ensure content doesn't feel cramped. */
+h1,
+h2,
+h3 {
+  padding-bottom: 1rem;
+  color: #335f89; /* Classic blue color for the text */
+  font-family: Georgia, sans-serif;
+}
+
+/* Sets font size for texts on the page. */
+p,
+li,
+table,
+form {
+  font-size: 0.8rem;
+}
+
+/* Styling for hyperlinks */
+a {
+  text-decoration: none; /* Removing default underline from links */
+  color: #5988b4; /* A slightly lighter shade for links for better distinction */
+}
+
+header section {
+  display: flex;
+  justify-content: space-between; /* Separates items from each other in the x-axis. */
+  height: 20rem;
+}
+
+/* Separate sections with margins to utilize collapsing margins. Also, use borders to space them apart. */
+main section,
+footer section {
+  margin: 4rem 0;
+  border-top: 2px solid #c9d0c9;
+}
+
+/* Adjust form elements to capture same look and feel. */
+form input,
+form textarea,
+form select {
+  padding: 0.2rem 0.2rem;
+  color: #000000;
+  border: 2px solid #335f89;
+}
+
+fieldset {
+  background-color: #eeeeee;
+  width: 55%;
+}
+
+label {
+  width: 240px;
+  display: inline-block;
+}
+
+form fieldset {
+  margin: 4;
+  padding: 4;
+  border: none;
+}
+
+form button {
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  border: 2px solid #335f89;
+  background-color: #335f89;
+  transition: background-color 0.3s ease-in;
+}
+
+/* When moving the mouse over the button, add a light blue color */
+form button:hover {
+  background-color: #6791b8cb;
+}
+
+/* Remove outlines from form elements, ensuring a cleaner look. */
+form input,
+form textarea {
+  outline: none;
+}
+
+table {
+  width: 70%;
+}
+
+td,
+th {
+  text-align: left;
+}
+
+/* === HEADER SECTION === */
+header section .image-container {
+  align-self: flex-start;
+
+  /* Makes the image shape square. */
+  width: 15rem;
+  height: 15rem;
+} /* Positions itself to the start of y-axis. */
+
+header section .image-container img {
+  display: block;
+
+  /* Fits the image into the container div. */
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 50%; /* Rounds the image. */
+
+  object-fit: cover; /* Preserves the original aspect ratio. */
+}
+
+header section .name-container {
+  align-self: center; /* Positions itself to the center of y-axis. */
+}
+
+header section .contact-container {
+  align-self: flex-end; /* Positions itself to the end of y-axis. */
+}
+
+/* === CONTACT SECTION === */
+.contact .form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .text-input-container,
+.contact .select-container,
+.contact .radio-container {
+  display: flex;
+  width: 30rem;
+  margin-bottom: 3rem;
+}
+
+.contact .text-input-container label,
+.contact .select-container label {
+  flex-grow: 1;
+}
+
+.contact .text-input-container input,
+.contact .select-container select {
+  width: 20rem;
+}
+
+.contact .text-input-container textarea {
+  display: flex;
+}
+
+.contact .button-container {
+  display: flex;
+}
+
+/* === HELPERS === */
+.border-solid {
+  border: 2px solid #335f89;
+}
+
+/* === MEDIA QUERIES FOR MOBILE DEVICES === */
+@media (min-width: 480px) and (max-width: 600px) {
+  /* For smaller screens, reduce font size and center the heading */
+  header section .name-container {
+    align-self: center; /* Positions itself to the end of y-axis. */
+  }
+
+  h1 {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  header section .contact-container {
+    align-self: center; /* Positions itself to the end of y-axis. */
+    text-align: left;
+  }
+}
